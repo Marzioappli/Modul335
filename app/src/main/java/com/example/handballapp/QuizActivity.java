@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import org.w3c.dom.Text;
 
@@ -50,5 +52,10 @@ public class QuizActivity extends AppCompatActivity{
         if (userAnswer == answers[currentQuestion]) {
             score++;
         }
+    }
+    private void showResult(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("SwissHandball Info Quiz Ergebniss:");
+        builder.setMessage("Sie haben" + score + "von" + questions.length + "Fragen richtig beantwortet");
     }
 }
