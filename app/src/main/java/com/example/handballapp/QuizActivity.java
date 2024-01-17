@@ -31,12 +31,24 @@ public class QuizActivity extends AppCompatActivity{
             public void onClick(View view) {
                 checkAnswer(true);
             }
-        })
+        });
         falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAnswer(false);
             }
-        })
+        });
+    }
+    private void showQuestion() {
+        if (currentQuestion < questions.length){
+            questionTextView.setText(questions[currentQuestion]);
+        }else {
+            showResult();
+        }
+    }
+    private void checkAnswer(boolean userAnswer) {
+        if (userAnswer == answers[currentQuestion]) {
+            score++;
+        }
     }
 }
