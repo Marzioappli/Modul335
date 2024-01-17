@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a8b8c4">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"/>
+
+    <!-- TextView für den Text -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Die Kadetten Schaffhausen sind ein Schweizer Handballverein mit Sitz in Schaffhausen. Der Verein wurde 1886 gegründet und ist einer der erfolgreichsten Handballclubs in der Schweiz. Die Kadetten Schaffhausen haben 13 nationale Meisterschaften gewonnen und nehmen regelmässig an Champions- oder EouropaLeague Wettbewerben teil, was sie zu einer der prominentesten Handballmannschaften in der Schweiz macht."
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-250dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Kadetten Schaffhausen"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/back"
+        android:src="@drawable/scaled_pfeil"
+        android:visibility="visible"
+        tools:visibility="visible" />
+</RelativeLayout>

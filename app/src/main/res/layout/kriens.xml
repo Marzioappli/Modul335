@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a8b8c4">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kriens"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Der Schweizer Handballverein Kriens Luzern, gegründet im Jahr 1943, ist ein bedeutender Akteur in der Schweizer Handballszene. Der Verein hat in seiner Geschichte erfolgreich an verschiedenen Wettbewerben teilgenommen und einige nationale Titel gewonnen. Kriens Luzern ist bekannt für seine engagierte Jugendförderung und hat talentierte Spieler entwickelt, die auch auf internationaler Ebene erfolgreich waren.Der Alltime Topscorer der Schweizer Nationalmannschaft, Andy Schmid spielt momentan bei Kriens Luzern. Die Mannschaft hat eine treue Fanbasis und trägt ihre Spiele im eigenen Stadion, der 'Pilatus Arena', aus, die zu einem wichtigen Ort für Handballbegeisterte in der Region geworden ist."
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-180dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Kriens Luzern"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/back"
+        android:src="@drawable/scaled_pfeil"
+        android:visibility="visible"
+        tools:visibility="visible" />
+</RelativeLayout>
