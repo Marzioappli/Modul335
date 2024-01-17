@@ -1,5 +1,6 @@
 package com.example.handballapp;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -57,5 +58,13 @@ public class QuizActivity extends AppCompatActivity{
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("SwissHandball Info Quiz Ergebniss:");
         builder.setMessage("Sie haben" + score + "von" + questions.length + "Fragen richtig beantwortet");
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
     }
+
 }
