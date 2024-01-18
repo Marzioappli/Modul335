@@ -25,5 +25,8 @@ public class ReminderBroadcast extends BroadcastReceiver {
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentIntent(contentIntent)
             .build();
+    NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+    notificationManager.notify(1, notification);
     }
+
 }
