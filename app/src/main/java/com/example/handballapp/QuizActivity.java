@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 
 public class QuizActivity extends AppCompatActivity{
     private TextView questionTextView;
-    private Button trueButton, falseButton;
+    private Button trueButton, falseButton, cancelButton;
     private String[] questions = {"Die Kadetten Schaffhausen haben 13 Meistertitel in ihrer Geschicht", "Der Rekordspieler von Pfadi Winterthur heisst: Jae-Wong Kang", "Kriens Luzern hat keinen bedeutenden Schweizer Spieler im Kader!"};
     private boolean[] answers = {true, true, false};
     private int currentQuestion = 0;
@@ -40,6 +40,12 @@ public class QuizActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 checkAnswer(false);
+            }
+        });
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

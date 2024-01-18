@@ -2,4 +2,5 @@
 <resources>
     <item name="textView" type="id" />
     <item name="pfeil" type="id" />
+    <item name="cancelButton" type="id" />
 </resources>
