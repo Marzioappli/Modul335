@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String CHANNEL_ID = "handballAppChannel"; // Stellen Sie sicher, dass dies ein gültiger, nicht-leerer String ist
+    private static final String CHANNEL_ID = "handballAppChannel";
     private NotificationManager notificationManager;
 
     @Override
@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ihre Button-Definitionen und die onClickListener
         Button kadettenbutton = findViewById(R.id.kadettenbutton);
         kadettenbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //Mithilfe von Vorlage (offengestellt in Moodle) Notification gelöst.
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
