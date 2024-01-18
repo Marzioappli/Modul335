@@ -2,6 +2,7 @@ package com.example.handballapp;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,6 +54,8 @@ public class QuizActivity extends AppCompatActivity{
         if (userAnswer == answers[currentQuestion]) {
             score++;
         }
+        currentQuestion++;
+        showQuestion();
     }
     private void showResult(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -62,9 +65,17 @@ public class QuizActivity extends AppCompatActivity{
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                finish();
             }
         });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        if(vibrator != null)  {
+            vibrator.vibrate(500);
+    }
+
     }
 
 }

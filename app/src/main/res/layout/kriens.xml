@@ -39,11 +39,15 @@
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="-220dp"
+        android:scaleX="0.1"
+        android:scaleY="0.1"
+        android:layout_gravity="center"
         android:background="?android:selectableItemBackground"
         android:contentDescription="@string/back"
-        android:src="@drawable/scaled_pfeil"
+        android:src="@drawable/pfeil"
         android:visibility="visible"
-        tools:visibility="visible" />
+        tools:visibility="visible"  />
 </RelativeLayout>
