@@ -25,6 +25,8 @@
         <activity android:name=".PfadiActivity" android:exported="false" />
         <activity android:name=".KriensActivity" android:exported="false"/>
         <activity android:name=".QuizActivity" android:exported="false" />
+
+        <receiver android:name=".ReminderBroadcast" />
     </application>
 
 </manifest>
