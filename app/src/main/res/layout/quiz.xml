@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#a8b8c4"
+    android:background="@drawable/background"
     android:padding="16dp">
 
     <TextView
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:layout_gravity="center"
+        android:layout_marginTop="150dp"
         android:text="Frage"/>
 
     <Button
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Wahr"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="50dp"/>
 
     <Button
         android:id="@+id/falseButton"
@@ -28,13 +29,12 @@
         android:layout_height="wrap_content"
         android:text="Falsch"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="50dp"/>
     <Button
         android:id="@id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
         android:text="Abbrechen"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="100dp"/>
 </LinearLayout>

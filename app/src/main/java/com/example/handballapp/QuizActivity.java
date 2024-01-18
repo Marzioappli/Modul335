@@ -27,6 +27,7 @@ public class QuizActivity extends AppCompatActivity{
         questionTextView = findViewById(R.id.questionTextView);
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
+        cancelButton = findViewById(R.id.cancelButton);
 
         showQuestion();
 
