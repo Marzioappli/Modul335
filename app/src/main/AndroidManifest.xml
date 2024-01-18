@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KadettenActivity" android:exported="false" />
-        <activity android:name=".PfadiActivity" android:exported="false" />
-        <activity android:name=".KriensActivity" android:exported="false"/>
-        <activity android:name=".QuizActivity" android:exported="false" />
+        <activity android:name=".KadettenActivity" android:exported="true" />
+        <activity android:name=".PfadiActivity" android:exported="true" />
+        <activity android:name=".KriensActivity" android:exported="true"/>
+        <activity android:name=".QuizActivity" android:exported="true" />
 
 
     </application>
