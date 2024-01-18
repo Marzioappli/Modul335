@@ -78,6 +78,7 @@ public class QuizActivity extends AppCompatActivity{
         AlertDialog dialog = builder.create();
         dialog.show();
 
+        //Vibration nachgeschlagen --> https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate-with-different-frequency
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         if(vibrator != null)  {
             vibrator.vibrate(500);
