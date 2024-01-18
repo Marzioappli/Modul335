@@ -32,6 +32,7 @@
         android:layout_marginTop="70dp"
         android:text="Pfadi Winterthur"
         android:textSize="28sp"
+        android:textColor="@color/rot"
         android:textStyle="bold" />
 
     <ImageButton
