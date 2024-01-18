@@ -3,6 +3,7 @@ package com.example.handballapp;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         setQuizReminder();
     }
 
-
+    private void setQuizReminder() {
+        Intent alarmintent = new Intent(this, ReminderBroadcast.class);
+        int intentFlags = PendingIntent.FLAG_IMMUTABLE;
+        PendingIntent alarmpendingIntent = PendingIntent.getBroadcast(this,0, alarmintent, intentFlags);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        long interval = 1000 * 60 * 2;
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, alarmpendingIntent);
+    }
+}
 
 
