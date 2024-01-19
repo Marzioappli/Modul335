@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class QuizActivity extends AppCompatActivity {
     private TextView questionTextView;
     private Button trueButton, falseButton, cancelButton;
-    private String[] questions = {"Die Kadetten Schaffhausen haben 13 Meistertitel in ihrer Geschichte", "Der Rekordspieler von Pfadi Winterthur heißt: Jae-Wong Kang", "Kriens Luzern hat keinen bedeutenden Schweizer Spieler im Kader!"};
-    private boolean[] answers = {true, true, false};
+    private String[] questions = {"Die Kadetten Schaffhausen haben 13 Meistertitel in ihrer Geschichte", "Der Rekordspieler von Pfadi Winterthur heißt: Jae-Wong Kang", "Kriens Luzern hat keinen bedeutenden Schweizer Spieler im Kader!", "Die Kadetten haben als Heimtrikot die Farbe Rot!", "Pfadi Winterthur ist für die starke Nachwuchsförderung bekannt!", "Kriens-Luzern spielt in der Saalsporthalle!"};
+    private boolean[] answers = {true, true, false, false, true, false};
     private int currentQuestion = 0;
     private int score = 0;
 
