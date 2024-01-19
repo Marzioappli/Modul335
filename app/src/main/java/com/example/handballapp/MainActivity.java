@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button kadettenbutton = findViewById(R.id.kadettenbutton);
         kadettenbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         Button pfadiButton = findViewById(R.id.pfadiwinterthur);
         pfadiButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         Button kriensButton = findViewById(R.id.kriensluzern);
         kriensButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         quizbutton = findViewById(R.id.quizbutton);
         quizbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,10 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
-        });
-        //Mithilfe von Vorlage (offengestellt in Moodle) Notification gelöst.
+        });      //Mithilfe von Vorlage (offengestellt in Moodle) Notification gelöst.
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "SwisssHandball Info Kanal";
             String description = "SwisssHandball Info Notifications";
@@ -70,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         }
         sendNotification();
     }
-
     private void sendNotification() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.btn_star_big_on)

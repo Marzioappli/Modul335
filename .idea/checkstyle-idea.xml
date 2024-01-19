@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CheckStyle-IDEA" serialisationVersion="2">
+    <checkstyleVersion>10.12.5</checkstyleVersion>
+    <scanScope>JavaOnly</scanScope>
+    <copyLibs>true</copyLibs>
+    <option name="thirdPartyClasspath" />
+    <option name="activeLocationIds" />
+    <option name="locations">
+      <list>
+        <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="d2f6edec-c4ec-418d-9d7e-39d89bae1e3d" type="LOCAL_FILE" scope="All" description="dreissig_Zeilen">$USER_HOME$/Desktop/M335/dreissig_Zeilen.xml</ConfigurationLocation>
+        <ConfigurationLocation id="43acc5d9-f923-4dcc-ab28-9fa44139956c" type="LOCAL_FILE" scope="All" description="dreissig_zahlen_original">$PROJECT_DIR$/dreissig_Zeilen.xml</ConfigurationLocation>
+        <ConfigurationLocation id="891e272d-0d4b-49ce-a66e-d83c22da743d" type="LOCAL_FILE" scope="All" description="englisch_namen">$PROJECT_DIR$/englisch.xml</ConfigurationLocation>
+      </list>
+    </option>
+  </component>
+</project>
