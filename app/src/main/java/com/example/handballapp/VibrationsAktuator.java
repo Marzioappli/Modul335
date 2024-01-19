@@ -9,7 +9,7 @@ public class VibrationsAktuator implements Aktuator {
     public VibrationsAktuator(Context context) {
         this.context = context;
     }
-
+// Hilfe für Zeit der Vibration --> https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate-with-different-frequency
     @Override
     public void start() {
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);

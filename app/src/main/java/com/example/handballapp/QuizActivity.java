@@ -2,7 +2,6 @@ package com.example.handballapp;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,9 +9,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.handballapp.Aktuator;
-import com.example.handballapp.VibrationsAktuator;
 
+//Allgemeine Übersicht Aktuator Informationsbeschaffung --> https://www.geeksforgeeks.org/how-to-vibrate-a-device-programmatically-in-android/
 public class QuizActivity extends AppCompatActivity {
     private TextView questionTextView;
     private Button trueButton, falseButton, cancelButton;
@@ -85,7 +83,6 @@ public class QuizActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        // Verwende den VibrationsAktuator, um das Gerät vibrieren zu lassen
         Aktuator vibratorAktuator = new VibrationsAktuator(this);
         vibratorAktuator.start();
     }

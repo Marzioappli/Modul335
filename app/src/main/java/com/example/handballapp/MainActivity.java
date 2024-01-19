@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendNotification() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.star_big_on)
+                .setSmallIcon(android.R.drawable.btn_star_big_on)
                 .setContentTitle("Quiz Reminder")
                 .setContentText("Spielen Sie nun das Quiz!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
