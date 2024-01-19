@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String CHANNEL_ID = "handballAppChannel";
     private NotificationManager notificationManager;
 
+    private Button quizbutton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button quizbutton = findViewById(R.id.quizbutton);
+        quizbutton = findViewById(R.id.quizbutton);
         quizbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,4 +79,5 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         notificationManager.notify(0, builder.build());
     }
+
 }
