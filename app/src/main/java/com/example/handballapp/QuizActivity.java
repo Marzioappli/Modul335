@@ -9,12 +9,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import org.w3c.dom.Text;
 
-public class QuizActivity extends AppCompatActivity{
+import com.example.handballapp.Aktuator;
+import com.example.handballapp.VibrationsAktuator;
+
+public class QuizActivity extends AppCompatActivity {
     private TextView questionTextView;
     private Button trueButton, falseButton, cancelButton;
-    private String[] questions = {"Die Kadetten Schaffhausen haben 13 Meistertitel in ihrer Geschicht", "Der Rekordspieler von Pfadi Winterthur heisst: Jae-Wong Kang", "Kriens Luzern hat keinen bedeutenden Schweizer Spieler im Kader!"};
+    private String[] questions = {"Die Kadetten Schaffhausen haben 13 Meistertitel in ihrer Geschichte", "Der Rekordspieler von Pfadi Winterthur heißt: Jae-Wong Kang", "Kriens Luzern hat keinen bedeutenden Schweizer Spieler im Kader!"};
     private boolean[] answers = {true, true, false};
     private int currentQuestion = 0;
     private int score = 0;
@@ -37,12 +39,14 @@ public class QuizActivity extends AppCompatActivity{
                 checkAnswer(true);
             }
         });
+
         falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAnswer(false);
             }
         });
+
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,13 +54,15 @@ public class QuizActivity extends AppCompatActivity{
             }
         });
     }
+
     private void showQuestion() {
-        if (currentQuestion < questions.length){
+        if (currentQuestion < questions.length) {
             questionTextView.setText(questions[currentQuestion]);
-        }else {
+        } else {
             showResult();
         }
     }
+
     private void checkAnswer(boolean userAnswer) {
         if (userAnswer == answers[currentQuestion]) {
             score++;
@@ -64,10 +70,11 @@ public class QuizActivity extends AppCompatActivity{
         currentQuestion++;
         showQuestion();
     }
-    private void showResult(){
+
+    private void showResult() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("SwissHandball Info Quiz Ergebniss:");
-        builder.setMessage("Sie haben" + score + "von" + questions.length + "Fragen richtig beantwortet");
+        builder.setTitle("SwissHandball Info Quiz Ergebnis:");
+        builder.setMessage("Sie haben " + score + " von " + questions.length + " Fragen richtig beantwortet");
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -78,12 +85,8 @@ public class QuizActivity extends AppCompatActivity{
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        //Vibration nachgeschlagen --> https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate-with-different-frequency
-        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-        if(vibrator != null)  {
-            vibrator.vibrate(500);
+        // Verwende den VibrationsAktuator, um das Gerät vibrieren zu lassen
+        Aktuator vibratorAktuator = new VibrationsAktuator(this);
+        vibratorAktuator.start();
     }
-
-    }
-
 }
